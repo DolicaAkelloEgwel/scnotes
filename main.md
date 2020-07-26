@@ -1,4 +1,4 @@
-# Basic Supercolider
+# Basic Supercollider
 
 ## Sine Waves
 
