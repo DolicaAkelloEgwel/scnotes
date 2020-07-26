@@ -2,5 +2,6 @@
 
 ## Sine Waves
 
-
-
+```supercollider
+{SinOSc.ar}.play;
+```
