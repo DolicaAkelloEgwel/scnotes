@@ -1,17 +1,16 @@
 # Basic Supercollider
 
-## Starting/Stopping A Server
+## Basics
+
+### Print Statements
 
 ```supercollider
-s.start;
-\\ something...
-s.quit;
+"Hello World".postIn;
 ```
 
-```supercollider
-```
+### Starting/Stopping A Server
 
-## Sine Waves
+### Sine Waves
 
 ```supercollider
 {SinOSc.ar}.play;
