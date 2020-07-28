@@ -35,7 +35,7 @@ Ctrl + .
 ```supercollider
 {SinOsc.ar(LFNoise0.kr(10).range(500, 1500), mul: 0.1)}.play;
 ```
-#### "Geiger Counter" Sound
+#### "Geiger Counter"/Space/Arctic Sound
 ```supercollider
 {RLPF.ar(Dust.ar([12,15]), LFNoise1.ar([0.3,0.2]).range(100,3000),0.2)}.play;
 ```
@@ -49,5 +49,17 @@ Everything inside the brackets is evaluated.
 "The pipe is made of gold".postln;
 "It can beat the bull".postIn;
 )
+```
+### Recording
+```supercollider
+// QUICK RECORD
+// Start recording:
+s.record;
+// Make some cool sound
+{Saw.ar(LFNoise0.kr([2, 3]).range(100, 2000), LFPulse.kr([4, 5]) * 0.1)}.play;
+// Stop recording:
+s.stopRecording;
+// Optional: GUI with record button, volume control, mute button:
+s.makeWindow;
 ```
 
