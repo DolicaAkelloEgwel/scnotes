@@ -10,7 +10,7 @@ Press Ctrl + Enter to evaluate.
 
 ### Server and Language
 
-![](bottomleft.png)
+![](statusbar.png)
 
 The interpreter is active by default. The server needs to be enabled.
 
