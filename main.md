@@ -4,7 +4,7 @@
 
 ### Hello World
 ```supercollider
-"Hello World".postIn;
+"Hello World".postln;
 ```
 Press Ctrl + Enter to evaluate.
 
@@ -50,6 +50,7 @@ Everything inside the brackets is evaluated.
 "It can beat the bull".postIn;
 )
 ```
+As long as the cursor is anywhere within the parenthesis, a single Ctrl+Enter will evaluate all of the lines.
 ### Recording
 ```supercollider
 // QUICK RECORD
