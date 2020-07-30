@@ -50,7 +50,7 @@ Everything inside the brackets is evaluated.
 "It can beat the bull".postIn;
 )
 ```
-As long as the cursor is anywhere within the parenthesis, a single Ctrl+Enter will evaluate all of the lines.
+As long as the cursor is anywhere within the parentheses, a single Ctrl+Enter will evaluate all of the lines.
 ### Recording
 ```supercollider
 // QUICK RECORD
