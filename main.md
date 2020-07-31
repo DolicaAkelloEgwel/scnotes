@@ -1,5 +1,3 @@
-# Supercollider Notes
-
 ## Basics
 
 ### Hello World
@@ -63,4 +61,32 @@ s.stopRecording;
 // Optional: GUI with record button, volume control, mute button:
 s.makeWindow;
 ```
+### Variables
+#### Global Variables
+```supercollider
+a = "Hello, World"; // a string of characters
+b = [0, 1, 2, 3, 5]; // a list
+c = Pbind(\note, Pwhite(0, 10), \dur, 0.1); // you'll learn all about Pbind later,
+don't worry
+// ...and now you can use them just like you would use the original data:
+a.postln; // post it
+b + 100; // do some math
+c.play; // play that Pbind
+d = b * 5; // take b, multiply by 5, and assign that to a new variable
 
+~myFreqs = [415, 220, 440, 880, 220, 990];
+~myDurs = [0.1, 0.2, 0.2, 0.5, 0.2, 0.1];
+Pbind(\freq, Pseq(~myFreqs), \dur, Pseq(~myDurs)).play;
+```
+Tilde is used for longer variable names. Variable names must begin with lower case letters.
+#### Local Variables
+```supercollider
+// Local variables: valid only within the code block.
+// Evaluate the block once and watch the Post window:
+(
+var apples = 4, oranges = 3, lemons = 8, bananas = 10;
+["Citrus fruits", oranges + lemons].postln;
+["Non−citrus fruits", bananas + apples].postln;
+"End".postln;
+)
+```
