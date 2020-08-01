@@ -66,9 +66,7 @@ s.makeWindow;
 ```supercollider
 a = "Hello, World"; // a string of characters
 b = [0, 1, 2, 3, 5]; // a list
-c = Pbind(\note, Pwhite(0, 10), \dur, 0.1); // you'll learn all about Pbind later,
-don't worry
-// ...and now you can use them just like you would use the original data:
+c = Pbind(\note, Pwhite(0, 10), \dur, 0.1); 
 a.postln; // post it
 b + 100; // do some math
 c.play; // play that Pbind
