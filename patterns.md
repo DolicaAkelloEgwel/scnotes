@@ -16,3 +16,11 @@ White keys to the right or left of middle C can be selected by using positive or
 Pbind(\degree, 16, \dur, 0.5).play;
 ```
 This plays a note twice in one second?
+
+### `Pseq`
+#### `Pbind` Duration
+```supercollider
+Pbind(\degree, Pseq([0,1,2,3,4,5,6,7], 1) \dur, 0.5).play;
+```
+`Pbind` plays several notes in sequence. Its arguments are a list of notes/numbers, and a number of repitions. `Pbind` is
+being used as the input for the `\degree` argument in place of a fixed number.
