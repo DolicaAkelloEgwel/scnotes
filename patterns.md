@@ -1,6 +1,6 @@
 # Patterns
 
-## The Patern Family
+## The Patern Family 👪
 
 ### `Pbind`
 `Pbind` is a member of the Pattern family in SuperCollider. The capital P in `Pbind` and `Pseries` stands for pattern.
