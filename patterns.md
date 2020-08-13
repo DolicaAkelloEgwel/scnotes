@@ -50,5 +50,6 @@ Pbind(\note, 2).play;
 Pbind(\midinote, 69).play;
 Pbind(\freq, 440).play;
 ```
-#### `\amp`{:.supercollider} and `\legato`{:.supercollider}
-The `\amp` keyword 
+#### `\amp` and `\legato` keywords
+- The `\amp` keyword defines the amplitude of events.  
+- The `\legato` defines the amount of legato between notes.
