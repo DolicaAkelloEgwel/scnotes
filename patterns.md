@@ -7,7 +7,7 @@
 ```supercollider
 Pbind(\degree, 0).play;
 ```
-This plays the note middle C onces per second. `\degree` refers to scale degrees, and the number 0 means the first scale degree.
+This plays the note middle C once per second. `\degree` refers to scale degrees, and the number 0 means the first scale degree.
 
 White keys to the right or left of middle C can be selected by using positive or negative numbers.
 
@@ -33,3 +33,14 @@ Pbind(\degree, Pseq([0,1,2,3,4,5,6,7], 5) \dur, Pseq([0.2, 0.1, 0.1, 0.2, 0.2, 0
   array to be cycled. This means that the last two notes will be played with a duration from the first two elements of
   the duration value array.
 
+#### "Readable" Version
+```supercollider
+(
+Pbind(
+    \degree, Pseq([0,1,2,3,4,5,6,7], 5) 
+    \dur, Pseq([0.2, 0.1, 0.1, 0.2, 0.2, 0.35], inf)
+).play;
+)
+```
+#### Specifying Pitch
+![](notes.png)
