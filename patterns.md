@@ -44,3 +44,11 @@ Pbind(
 ```
 #### Specifying Pitch
 ![](notes.png)
+```supercollider
+Pbind(\degree, 1).play;
+Pbind(\note, 2).play;
+Pbind(\midinote, 69).play;
+Pbind(\freq, 440).play;
+```
+#### `\amp`{:.supercollider} and `\legato`{:.supercollider}
+The `\amp` keyword 
