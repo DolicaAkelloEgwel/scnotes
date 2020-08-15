@@ -53,3 +53,70 @@ Pbind(\freq, 440).play;
 #### `\amp` and `\legato` keywords
 - The `\amp` keyword defines the amplitude of events.  
 - The `\legato` defines the amount of legato between notes.
+
+##### Increasing `\legato` example
+```supercollider
+(
+Pbind(
+    \degree, Pseq([0,-1,2,-3,4,-3,7,11,4,2,0,-3], 10),
+    \dur, Pseq([0.2, 0.2, 0.2], inf),
+    \amp, Pseq([0.7, 0.5, 0.3, 0.2], inf),
+    \legato, Pseries(0, 0.1)
+).play;
+)
+```
+### `Pwhite`
+
+`Pwhite` is an equal distribution random number generator.
+
+```supercollider
+(
+Pbind(
+    \freq, Pwhite(100, 500), // selects a random number between 100 and 500
+    \dur, Prand([0.15, 0.25, 0.3], inf),
+    \amp, 0.2,
+    \legato, 0.3
+).trace.play; // prints out values for every event in the Post window - handy for debugging
+)
+```
+#### `Pwhite` and `Prand` differences
+
+Both have to do with randomness but take in different arguments and do different things.
+
+- `Pwhite(low, high)` selects a random number between `low` and `high`
+- `Prand([e1,e2,e3,...])` selects a random element from a list
+
+If `Pwhite`'s arguments are integers then it will only generate integers. If one or both arguments
+are floats, then it will output floats.
+
+#### Events
+
+```supercollider
+(
+Pbind(
+    \note, Pseq([0, 2, 3, 5, 7, 8, 11], 4),
+    \dur, 0.15;
+).play;
+)
+// Generates 16 events
+(
+Pbind(
+    \note, Prand([0, 2, 3, 5, 7, 8, 11], 4),
+    \dur, 0.15;
+).play;
+)
+// Generates 4 events
+(
+Pbind(
+    \note, Pseq([0, 2, 3, 5, 7, 8, 11], 4),
+    \dur, Pwhite(0.15, 0.5);
+).play;
+)
+// Also generates 16 events
+```
+> `Pbind` stops playing when the shortest internal pattern has finished playing. This is determined by the
+> `repeats` argument of each internal pattern.
+
+### `Prand` and `Pxrand` example
+
+
