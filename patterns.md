@@ -119,4 +119,59 @@ Pbind(
 
 ### `Prand` and `Pxrand` example
 
+```supercollider
+Pbind(
+    \note, Prand([1,2], 4),
+    \dur, 0.15;
+).trace.play;
+)
+(
+Pbind(
+    \note, Pxrand([1,2], 4),
+    \dur, 0.15;
+).trace.play;
+)
+```
+`Prand` returns elements from a list but `Pxrand` doesn not allow returning the same element twice in a row.
 
+Example `Prand` output:
+```
+-> an EventStreamPlayer
+( 'dur': 0.15, 'note': 2 )
+( 'dur': 0.15, 'note': 2 )
+( 'dur': 0.15, 'note': 2 )
+( 'dur': 0.15, 'note': 2 )
+```
+
+Example `Pxrand` output:
+```
+-> an EventStreamPlayer
+( 'dur': 0.15, 'note': 2 )
+( 'dur': 0.15, 'note': 1 )
+( 'dur': 0.15, 'note': 2 )
+( 'dur': 0.15, 'note': 1 )
+-> an EventStreamPlayer
+( 'dur': 0.15, 'note': 1 )
+( 'dur': 0.15, 'note': 2 )
+( 'dur': 0.15, 'note': 1 )
+( 'dur': 0.15, 'note': 2 )
+```
+
+In this case the output for `Pxrand` must be 1-2-1-2 or 2-1-2-1.
+
+### `Pslide`
+
+TODO
+
+### `Pgeom` durations
+
+TODO
+This is interesting...
+
+### `Pn`
+
+TODO
+
+### `\strum` argument
+
+TODO
