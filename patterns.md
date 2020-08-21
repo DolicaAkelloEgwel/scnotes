@@ -161,7 +161,15 @@ In this case the output for `Pxrand` must be 1-2-1-2 or 2-1-2-1.
 
 ### `Pslide`
 
-TODO
+```supercollider
+(
+Pbind(
+    \note, Pslide([0,2,4,5,7], 3, 3 ,1),
+    \dur, 0.15;
+).trace.play;
+)
+```
+Number of events is equal to `\repeats` * `\length`.
 
 ### `Pgeom` durations
 
