@@ -169,12 +169,27 @@ Pbind(
 ).trace.play;
 )
 ```
-Number of events is equal to `\repeats` * `\length`.
+Number of events is equal to `\repeats` * `\length`. 
 
 ### `Pgeom` durations
 
-TODO
-This is interesting...
+```supercollder
+(
+Pbind(
+    \note, Pseries(0, 2, 15),
+    \dur, Pgeom(0.1, 0.9, 25);
+).trace.play;
+)
+// Pgeom - exponetial decrease in duration
+
+(
+Pbind(
+    \note, Pseries(0, 2, 15),
+    \dur, Pgeom(0.1, 1.1, 25);
+).trace.play;
+)
+// Pgeom - exponential increase in duration
+```
 
 ### `Pn`
 
