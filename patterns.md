@@ -52,7 +52,7 @@ Pbind(\freq, 440).play;
 ```
 #### `\amp` and `\legato` keywords
 - The `\amp` keyword defines the amplitude of events.  
-- The (https://www.masterclass.com/articles/music-101-what-is-legato-learn-what-effect-legato-has-on-music-and-what-you-need-for-good-legato-technique#how-does-legato-sound-on-various-instruments)[`\legato`] defines the amount of legato between notes.
+- The [`\legato`](https://www.masterclass.com/articles/music-101-what-is-legato-learn-what-effect-legato-has-on-music-and-what-you-need-for-good-legato-technique#how-does-legato-sound-on-various-instruments) defines the amount of legato between notes.
 
 ##### Increasing `\legato` example
 ```supercollider
