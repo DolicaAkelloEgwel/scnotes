@@ -193,7 +193,26 @@ Pbind(
 
 ### `Pn`
 
-TODO
+Easier way to have repeating elements in a row.
+
+```supercollider
+(
+Pbind(
+	\note, Pseq([0, Pn(5,4)], 1),
+	\dur, 0.15;
+).trace.play;
+)
+```
+
+Output:
+```
+-> an EventStreamPlayer
+( 'dur': 0.15, 'note': 0 )
+( 'dur': 0.15, 'note': 5 )
+( 'dur': 0.15, 'note': 5 )
+( 'dur': 0.15, 'note': 5 )
+( 'dur': 0.15, 'note': 5 )
+```
 
 ### `\strum` argument
 
