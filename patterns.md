@@ -217,3 +217,15 @@ Output:
 ### `\strum` argument
 
 TODO
+
+### Chords
+
+```supercollider
+(
+Pbind(
+    \note, Pseq([[0,3,7],[2,5,8],3),
+    \dur, 0.15
+).play;
+)
+```
+
