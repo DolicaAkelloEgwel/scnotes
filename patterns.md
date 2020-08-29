@@ -203,7 +203,6 @@ Pbind(
 ).trace.play;
 )
 ```
-
 Output:
 ```
 -> an EventStreamPlayer
@@ -228,7 +227,6 @@ Pbind(
 ).play;
 )
 ```
-
 
 ### Playing Multiple Pbinds Together
 
