@@ -231,7 +231,6 @@ Pbind(
 ### Playing Multiple Pbinds Together
 
 #### Simultaneously
-
 ```supersollider
 (
 Pbind(
@@ -251,5 +250,4 @@ Pbind(
 ).play;
 )
 ```
-
 #### Forking
