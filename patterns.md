@@ -250,6 +250,24 @@ Pbind(
 ).play;
 )
 ```
+##### Variables
+```supercollider
+~scale = [0,1,2,3,4,5,6,7] * 2;
+~durs = [0.4,0.2,0.2,0.4,0.8,0.2,0.2,0.2];
+(
+Pbind(
+    \freq, Pn(~scale, 20),
+    \dur, 0.5,
+    \legato, Pwhite(0.1,1)
+).play;
+Pbind(
+    \freq, Pn(~scale.reverse + 7, 20),
+    \dur, 0.25,
+    \legato, Pwhite(0.1, 1)
+).play;
+)
+```
+
 #### Forking
 ```supercollider
 (
