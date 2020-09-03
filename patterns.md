@@ -294,4 +294,13 @@ Pbind(
 ```
 #### Ppar
 
+`Pbar(list, repeats)` - Start each of the events in the `list` at the same time. When the last one finishes, the 
+`Pbar` also stops. If `repeats` is greater than one, all the subpatterns start over from the beginning.
+
+TODO: There is an example with Kraftwerk somewhere?
+
 #### Pspawner
+
+#### Starting and Stopping With Variables
+
+TODO
