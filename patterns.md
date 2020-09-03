@@ -301,6 +301,12 @@ TODO: There is an example with Kraftwerk somewhere?
 
 #### Pspawner
 
+`Pspawner(routineFunc)` - This function is used to make a routine. A Spawner object gets passed into this routine,
+and this object is used to add or remove streams to/from the parallel stream. New patterns can be added to
+the sequence or in parallel.
+
+TODO: Example needed...
+
 #### Starting and Stopping With Variables
 
 TODO
