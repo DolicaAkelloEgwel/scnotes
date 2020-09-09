@@ -1,2 +1,5 @@
+## Receiver Notation / Functional Notation
 
-[Patterns](./patterns.md)
+## Nesting
+
+## Functions
