@@ -3,3 +3,7 @@
 ## Nesting
 
 ## Functions
+
+## Enclosures
+
+Curly braces define functions.
