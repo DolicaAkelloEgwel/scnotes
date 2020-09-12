@@ -20,3 +20,6 @@ TODO: Animation with scope?
 ```supercollider
 {Pulse.ar}.plot;
 ```
+
+## Audio Rate and Control Rate
+UGens are typically followed by the letters `.ar` and `.kr`. These stand for Audio Rate and Control Rate.
