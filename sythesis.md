@@ -2,10 +2,11 @@
 
 ## UGens (Unit Generators)
 
-### Mouse Theramin
+### Mouse Theremin
 ```supercollider
 {SinOsc.ar(freq: MouseX.kr(300, 2500), mul: MouseY.kr(0, 1))}.play;
 ```
+TODO: Animation with scope?
 ### Plotting
 ![](sinoscplot.png)
 ```supercollider
