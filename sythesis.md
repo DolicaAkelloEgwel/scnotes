@@ -33,7 +33,15 @@ performed by the server. The amount of numbers generated per second with `.kr` i
 generated with `.kr` does not go to the loudspeaker. Instead it is normally used to control the parameters of 
 other signals -- for example, the `Mouse.kr` in the theremin was controlling the frequency of `SinOsc`.
 
-TODO: Unipolar/Bipolar difference
+❗UGens generate numbers. Some of these numbers become sound signals while others become control signals.
+
+```supercollider
+{SinOsc.ar(freq: SinOsc.kr * 200, mul: SinOsc.kr(200))}.play;
+```
+
+*Unipolar Ugens* generate numbers between 0 and 1.
+*Bipolar UGens* generate numbers between -1 and +1.
+
 TODO: Poll method
 
 ## Scaling Ranges
