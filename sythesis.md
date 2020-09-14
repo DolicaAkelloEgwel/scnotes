@@ -23,3 +23,17 @@ TODO: Animation with scope?
 
 ## Audio Rate and Control Rate
 UGens are typically followed by the letters `.ar` and `.kr`. These stand for Audio Rate and Control Rate.
+
+`SinOsc.ar` creates a unit generator that runs at the audio rate. If the computer is running at the common 
+sampling rate of 44100 Hz, the sine oscillator will generate 44100 samples per second to send to the 
+loudspeaker.
+
+`SinOsc.kr` creates a unit generator that runs at the control rate. The job of generating the samples is
+performed by the server. The amount of numbers generated per second with `.kr` is much smaller. The signal
+generated with `.kr` does not go to the loudspeaker. Instead it is normally used to control the parameters of 
+other signals -- for example, the `Mouse.kr` in the theremin was controlling the frequency of `SinOsc`.
+
+TODO: Unipolar/Bipolar difference
+TODO: Poll method
+
+## Scaling Ranges
