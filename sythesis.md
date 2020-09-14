@@ -42,6 +42,24 @@ other signals -- for example, the `Mouse.kr` in the theremin was controlling the
 *Unipolar Ugens* generate numbers between 0 and 1.
 *Bipolar UGens* generate numbers between -1 and +1.
 
-TODO: Poll method
+### `.poll` output
+```supercollider
+{SinOsc.kr(1).poll}.play;
+```
+This doesn't generate any sound.
+```
+-> Synth('temp__18' : 1000)
+UGen(SinOsc): 0.00837747
+UGen(SinOsc): 0.594541
+UGen(SinOsc): 0.953611
+UGen(SinOsc): 0.948435
+UGen(SinOsc): 0.58099
+UGen(SinOsc): -0.0083736
+UGen(SinOsc): -0.594538
+UGen(SinOsc): -0.95361
+UGen(SinOsc): -0.948436
+UGen(SinOsc): -0.580993
+UGen(SinOsc): 0.00836973
+```
 
 ## Scaling Ranges
