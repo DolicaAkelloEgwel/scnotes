@@ -77,4 +77,11 @@ Most UGens have `mul` and `add` arguments.
 {SinOsc.kr(1, mul: 50, add: 150).poll}.play;
 ```
 These produce the same result.
-![](scalingexample.png)
+![](scalingexample.png##)
+### `linlin` and friends
+`linlin` - Linear to linear.  
+`linexp` - Linear to exponential.
+`explin` - Exponential to linear.
+`expexp` - Exponential to exponential.
+
+TODO: example
