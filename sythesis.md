@@ -81,8 +81,8 @@ These produce the same result.
 ### `linlin` and friends
 `linlin` - Linear to linear.  
 `linexp` - Linear to exponential.
-`explin` - Exponential to linear.
-`expexp` - Exponential to exponential.
+`explin` - Exponential to linear.  
+`expexp` - Exponential to exponential.  
 
 TODO: example
 ```supercollider
