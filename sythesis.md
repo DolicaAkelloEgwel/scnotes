@@ -39,7 +39,7 @@ other signals -- for example, the `Mouse.kr` in the theremin was controlling the
 {SinOsc.ar(freq: SinOsc.kr * 200, mul: SinOsc.kr(200))}.play;
 ```
 
-*Unipolar Ugens* generate numbers between 0 and 1.
+*Unipolar Ugens* generate numbers between 0 and 1.  
 *Bipolar UGens* generate numbers between -1 and +1.
 
 ### `.poll` output
@@ -63,3 +63,7 @@ UGen(SinOsc): 0.00836973
 ```
 
 ## Scaling Ranges
+
+### The `range` method
+
+### `mul` and `add` arguments
