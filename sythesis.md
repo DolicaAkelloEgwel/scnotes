@@ -63,7 +63,9 @@ UGen(SinOsc): 0.00836973
 ```
 
 ## Scaling Ranges
-
 ### The `range` method
-
+```supercollider
+{SinOsc.ar(freq: LFNoise0.kr(5).range(500, 1500), mul: 0.1)}.play;
+```
+Scaling the output of `LFNoise0.kr` to set the frequency of `SinOsc.ar`.
 ### `mul` and `add` arguments
