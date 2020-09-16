@@ -94,3 +94,7 @@ a.linexp(1,7,0.01,127).round(1);
 -> [ 0.0, 0.0, 0.0, 1.0, 5.0, 26.0, 127 ]
 ```
 TODO: How does it decide steps?
+## Stopping Individual Synths
+TODO
+## The `set` message
+TODO
