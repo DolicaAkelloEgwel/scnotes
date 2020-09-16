@@ -77,3 +77,4 @@ Most UGens have `mul` and `add` arguments.
 {SinOsc.kr(1, mul: 50, add: 150).poll}.play;
 ```
 These produce the same result.
+![](scalingexample.png)
