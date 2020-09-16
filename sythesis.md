@@ -67,5 +67,13 @@ UGen(SinOsc): 0.00836973
 ```supercollider
 {SinOsc.ar(freq: LFNoise0.kr(5).range(500, 1500), mul: 0.1)}.play;
 ```
-Scaling the output of `LFNoise0.kr` to set the frequency of `SinOsc.ar`.
+`LFNoise0` is a bipolar UGen. Scaling the output of `LFNoise0.kr` to set the frequency of `SinOsc.ar` allows it 
+to be used for "hearable" frequencies.
+
 ### `mul` and `add` arguments
+Most UGens have `mul` and `add` arguments.
+```supercollider
+{SinOsc.kr(1).range(100,200).poll}.play;
+{SinOsc.kr(1, mul: 50, add: 150).poll}.play;
+```
+These produce the same result.
