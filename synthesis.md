@@ -80,7 +80,7 @@ These produce the same result.
 ![](scalingexample.png##)
 ### `linlin` and friends
 `linlin` - Linear to linear.  
-`linexp` - Linear to exponential.
+`linexp` - Linear to exponential.  
 `explin` - Exponential to linear.  
 `expexp` - Exponential to exponential.  
 
