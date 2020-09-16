@@ -85,3 +85,12 @@ These produce the same result.
 `expexp` - Exponential to exponential.
 
 TODO: example
+```supercollider
+a = [1,2,3,4,5,6,7];
+a.linexp(1,7,0.01,127).round(1);
+```
+```
+-> [ 1, 2, 3, 4, 5, 6, 7 ]
+-> [ 0.0, 0.0, 0.0, 1.0, 5.0, 26.0, 127 ]
+```
+TODO: How does it decide steps?
