@@ -117,6 +117,8 @@ x.set(\freq, 920, \amp, 0.1);
 x.free;
 ```
 ## Audio Buses
+TODO
+## `Out` and `In` UGens
 ```supercollider
 {Out.ar(1, SinOsc.ar(440, 0, 0.01))}.play;
 {Out.ar(0, SinOsc.ar(440, 0, 0.01))}.play;
@@ -126,4 +128,3 @@ that you want to send.
 
 TODO: go through effect example
 
-## `Out` and `In` UGens
