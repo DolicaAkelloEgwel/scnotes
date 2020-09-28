@@ -107,7 +107,7 @@ b.free;
 c.free;
 ```
 ## The `set` message
-Allows changing synth parameters while the synth is still running
+Allows changing synth parameters while the synth is still running.
 ```supercollider
 x = {arg freq = 440, amp = 0.1; SinOsc.ar(freq, 0, amp)}.play;
 
@@ -116,4 +116,14 @@ x.set(\freq, 778);
 x.set(\freq, 920, \amp, 0.1);
 x.free;
 ```
+## Audio Buses
+```supercollider
+{Out.ar(1, SinOsc.ar(440, 0, 0.01))}.play;
+{Out.ar(0, SinOsc.ar(440, 0, 0.01))}.play;
+```
+The `Out` UGen routes signals to specific buses. The first argument is the target bus, the second argument is the signal
+that you want to send.  
 
+TODO: go through effect example
+
+## `Out` and `In` UGens
