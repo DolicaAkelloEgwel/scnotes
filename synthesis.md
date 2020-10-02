@@ -127,6 +127,17 @@ Ctrl + M opens the Meter window. It shows the levels of all inputs and outputs. 
 ```
 The `Out` UGen routes signals to specific buses. The first argument is the target bus, the second argument is the signal
 that you want to send.  
-
-TODO: go through effect example
+```supercollider
+// start the effect
+f = {Out.ar(0, BPF.ar(in: In.ar(55), freq: MouseY.kr(1000,5000), rq: 0.1))}.play;
+// start the source
+n = {Out.ar(55, WhiteNoise.ar(0.5))}.play;
+```
+The first line declates a synth stored in variable `f` consisting of a Band Pass Filter UGen. A band pass filter
+takes any sound as input and filters out all frequences except the region that you want to let through. `In.ar` is
+the UGen we use to read from an audio bus; so with `In.ar(55)` being used as input of the `BPF`, any sound that we
+send to bus 55 will be passed to the band pass filter.  
+  
+Note that the first synth does not make any sound at first. It will only make sound when the second line is
+evaluated and we send some sound to bus 55.
 
