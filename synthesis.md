@@ -139,5 +139,16 @@ the UGen we use to read from an audio bus; so with `In.ar(55)` being used as inp
 send to bus 55 will be passed to the band pass filter.  
   
 Note that the first synth does not make any sound at first. It will only make sound when the second line is
-evaluated and we send some sound to bus 55.
-
+evaluated and we send some sound to bus 55. Noise synth -> Bus 55 -> Filter Synth.  
+  
+The order of execution is important. The example would not work if the lines were swapped.
+## Microphone Input
+```supercollider
+// Takes sound from first input bus
+{SoundIn.ar(0)}.play;
+// Takes sound from first and second input bus
+{SoundIn.ar([0,1])}.play;
+// Reverb
+{FreeVerb.ar(SoundIn.ar([0,1]), mix: 0.5, room: 0.9)}.play;
+```
+TODO: get working
