@@ -158,3 +158,7 @@ a = {FreeVerb.ar(in: Saw.ar(freq: [44, 20], mul: Saw.kr(freq: 15, mul: 10)), mix
 ```
 The `freq: [44, 20]` argument creates a sound in both speakers. A larger array of frequencies can be used to
 send sound to other channels provided the sound card allows it.
+```supercollider
+a = {FreeVerb.ar(in: Saw.ar(freq: [15, 20], mul: [Saw.kr(freq: 50, mul: 10), Line.kr(0, 10, 20)]), mix: 0.7, room: 2)}.play;
+```
+Multichannel expansion with `freq` and `mul`. SuperCollider takes care of it.
