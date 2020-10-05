@@ -152,3 +152,8 @@ The order of execution is important. The example would not work if the lines wer
 {FreeVerb.ar(SoundIn.ar([0,1]), mix: 0.5, room: 0.9)}.play;
 ```
 TODO: get working
+## Multichannel Expansion
+```supercollider
+a = {FreeVerb.ar(in: Saw.ar(freq: [44, 20], mul: Saw.kr(freq: 15, mul: 10)), mix: 0.7, room: 1.2)}.play;
+```
+Passes a sound to both speakers.
