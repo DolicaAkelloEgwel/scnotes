@@ -156,4 +156,5 @@ TODO: get working
 ```supercollider
 a = {FreeVerb.ar(in: Saw.ar(freq: [44, 20], mul: Saw.kr(freq: 15, mul: 10)), mix: 0.7, room: 1.2)}.play;
 ```
-Passes a sound to both speakers.
+The `freq: [44, 20]` argument creates a sound in both speakers. A larger array of frequencies can be used to
+send sound to other channels provided the sound card allows it.
