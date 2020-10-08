@@ -162,3 +162,10 @@ send sound to other channels provided the sound card allows it.
 a = {FreeVerb.ar(in: Saw.ar(freq: [15, 20], mul: [Saw.kr(freq: 50, mul: 10), Line.kr(0, 10, 20)]), mix: 0.7, room: 2)}.play;
 ```
 Multichannel expansion with `freq` and `mul`. SuperCollider takes care of it.
+TODO: phone exercise
+```supercollider
+s.boot;
+a = {Out.ar(0, SinOsc.ar(freq: [400, 400], mul: LFPulse.ar(2)))}.play;
+a.free;
+```
+Phone disconnected sound.
