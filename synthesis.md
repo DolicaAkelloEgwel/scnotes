@@ -162,10 +162,17 @@ send sound to other channels provided the sound card allows it.
 a = {FreeVerb.ar(in: Saw.ar(freq: [15, 20], mul: [Saw.kr(freq: 50, mul: 10), Line.kr(0, 10, 20)]), mix: 0.7, room: 2)}.play;
 ```
 Multichannel expansion with `freq` and `mul`. SuperCollider takes care of it.
-TODO: phone exercise
 ```supercollider
 s.boot;
 a = {Out.ar(0, SinOsc.ar(freq: [400, 400], mul: LFPulse.ar(2)))}.play;
 a.free;
 ```
 Phone disconnected sound.
+## The Bus object
+TODO
+## Panning
+```supercollider
+p = {Pan2.ar(in: PinkNoise.ar, pos: SinOsc.kr(2), level: 0.1)}.play;
+```
+Panning is the spreading of an audio signal into a stereo or multichannel sound field. This is a mono signal 
+bounding right and left with `Pan2`.
