@@ -191,3 +191,4 @@ x = {
 )
 ```
 `lfn` is used to slide between randon numbers that it generates every second.
+TODO: written exercise
