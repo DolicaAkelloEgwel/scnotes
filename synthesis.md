@@ -192,6 +192,10 @@ x = {
 ```
 `lfn` is used to slide between randon numbers that it generates every second. It is used in two places in order to
 select a random centre frequency between 500 and 2500 for the band pass filter, and to determine where the 
-sound "lands" in `Pan2`. This causes the change in frequency to match the change in position.
+sound "lands" in `Pan2`. Because the same object is used, this causes the change in frequency to match the change in 
+position. TODO: center frequency? 
 
-TODO: center frequencies, bpf, etc?
+The `mul` argument of `BPF` controls the "volume." The number 20 was used because the filter's sharpness means 
+going too far below this value would cause the amplitude to drop too much.  
+
+The rhythm is being controlled by the `mul` argument for `Saw`. TODO: explain more?
