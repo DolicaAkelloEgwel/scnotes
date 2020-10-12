@@ -190,5 +190,8 @@ x = {
 }.play;
 )
 ```
-`lfn` is used to slide between randon numbers that it generates every second.
-TODO: written exercise
+`lfn` is used to slide between randon numbers that it generates every second. It is used in two places in order to
+select a random centre frequency between 500 and 2500 for the band pass filter, and to determine where the 
+sound "lands" in `Pan2`. This causes the change in frequency to match the change in position.
+
+TODO: center frequencies, bpf, etc?
