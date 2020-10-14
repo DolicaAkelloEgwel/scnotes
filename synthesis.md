@@ -199,3 +199,15 @@ The `mul` argument of `BPF` controls the "volume." The number 20 was used becaus
 going too far below this value would cause the amplitude to drop too much.  
 
 The rhythm is being controlled by the `mul` argument for `Saw`. TODO: explain more?
+## Mix and Splay
+```supercollider
+// 5 channel output
+a = {SinOsc.ar([100, 300, 500, 700, 900], mul: 0.1)}.play;
+a.free;
+// Mix down to mono
+b = {Mix(SinOsc.ar([100, 300, 500, 700, 900], mul: 0.1))}.play;
+b.free;
+// Mix down to stereo
+c = {Splay.ar(SinOsc.ar([100, 300, 500, 700, 900], mul: 0.1))}.play;
+c.free;
+```
