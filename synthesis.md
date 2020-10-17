@@ -76,7 +76,7 @@ Most UGens have `mul` and `add` arguments.
 {SinOsc.kr(1).range(100,200).poll}.play;
 {SinOsc.kr(1, mul: 50, add: 150).poll}.play;
 ```
-These produce the same result.
+These produce the same result.  
 ![](scalingexample.png##)
 ### `linlin` and friends
 `linlin` - Linear to linear.  
