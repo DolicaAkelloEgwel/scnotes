@@ -212,6 +212,8 @@ c = {Splay.ar(SinOsc.ar([100, 300, 500, 700, 900], mul: 0.1))}.play;
 c.free;
 ```
 `Mix` mixes an array of UGens into a single channel. `Splay` spreads an array of channels across a stereo field.
+TODO `fill` with `Mix`
+## Audio Files
 ## Control Buses
 TODO
 ### `asMap`
