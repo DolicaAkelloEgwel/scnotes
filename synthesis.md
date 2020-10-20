@@ -213,6 +213,21 @@ c.free;
 ```
 `Mix` mixes an array of UGens into a single channel. `Splay` spreads an array of channels across a stereo field.
 TODO `fill` with `Mix`
+```supercollider
+(
+d = {
+    arg fundamental = 110;
+    var harmonics = [1,2,3,4,5,6,7,8,9];
+    var snd = BPF.ar(
+        in: Saw.ar(32, LFPulse.ar(harmonics, width: 0.1)),
+        freq: harmonics * fundamental,
+        rq: 0.01,
+        mul: 20);
+    Splay.ar(snd);
+}.play;
+)
+d.set(\fundamental, 100);
+```
 ## Audio Files
 ## Control Buses
 TODO
