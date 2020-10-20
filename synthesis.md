@@ -228,6 +228,8 @@ d = {
 )
 d.set(\fundamental, 100);
 ```
+The array `harmonics` has nine items, so the synth expands to nine channels. `Splay` takes the array of the nine
+channels and mixes it down to stereo, spreading the channels evenly from left to right.
 ## Audio Files
 ## Control Buses
 TODO
