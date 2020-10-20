@@ -212,7 +212,6 @@ c = {Splay.ar(SinOsc.ar([100, 300, 500, 700, 900], mul: 0.1))}.play;
 c.free;
 ```
 `Mix` mixes an array of UGens into a single channel. `Splay` spreads an array of channels across a stereo field.
-TODO `fill` with `Mix`
 ```supercollider
 (
 d = {
@@ -230,6 +229,27 @@ d.set(\fundamental, 100);
 ```
 The array `harmonics` has nine items, so the synth expands to nine channels. `Splay` takes the array of the nine
 channels and mixes it down to stereo, spreading the channels evenly from left to right.
+```supercollider
+// Cluster generator
+c = {Mix.fill(16, {SinOsc.ar(rrand(100, 3000), mul: 0.01)})}.play;
+c.free;
+
+(
+n = { Mix.fill(12, {arg counter;
+    var partial = counter + 1;
+    SinOsc.ar(partial * 440, mul: 1 / partial.squared) * 0.1
+})}.play;
+FreqScope.new;
+)
+n.free;
+```
+`Mix.fill` takes the size of the array you want to create and a function in curly braces. Using this, it creates
+an array of synths and mixes it down to mono all at once.
+TODO why use?   
+In the cluster generator example, `Mix.fill` evaluates the function 16 times. Sixteen sine waves are created with
+a different frequency and are mixed down to mono then sent to the left channel.  
+In the second example, twelve sine oscillators are generated following the harmonic series, and are mixed down
+to a single note in mono.
 ## Audio Files
 ## Control Buses
 TODO
