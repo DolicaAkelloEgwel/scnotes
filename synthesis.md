@@ -249,8 +249,9 @@ TODO why use?
 In the cluster generator example, `Mix.fill` evaluates the function 16 times. Sixteen sine waves are created with
 a different frequency and are mixed down to mono then sent to the left channel.  
 In the second example, twelve sine oscillators are generated following the harmonic series, and are mixed down
-to a single note in mono.
+to a single note in mono. TODO single note?
 ## Audio Files
-## Control Buses
+TODO
+## Synth Nodes
 TODO
 ### `asMap`
