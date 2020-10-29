@@ -253,11 +253,11 @@ to a single note in mono. TODO single note?
 ## Audio Files
 TODO
 ## Synth Nodes
-TODO
+TODO example + images
 Rectangles in the node tree are synth nodes. Each synth gets a temporary name and stays there so long as it is
 running.  
 The shortcut Ctrl+. stops all the nodes that are running on the server. A synth may be running even if it is just
 generating silence.
 
 Using `doneAction: 2` means that the synth frees itself when it's done its job.
-### `asMap`
+## Enveloped 
