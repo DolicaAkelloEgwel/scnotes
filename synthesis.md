@@ -254,6 +254,13 @@ to a single note in mono. TODO single note?
 TODO
 ## Synth Nodes
 TODO example + images
+```
+s.plotTree;
+w = ...
+x = ...
+y = ...
+z = ...
+```
 Rectangles in the node tree are synth nodes. Each synth gets a temporary name and stays there so long as it is
 running.  
 The shortcut Ctrl+. stops all the nodes that are running on the server. A synth may be running even if it is just
