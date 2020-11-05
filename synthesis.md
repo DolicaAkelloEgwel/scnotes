@@ -256,10 +256,16 @@ TODO
 TODO example + images
 ```
 s.plotTree;
-w = ...
-x = ...
-y = ...
-z = ...
+
+w = { SinOsc.ar(60.midicps, 0, 0.1) }.play;
+x = { SinOsc.ar(64.midicps, 0, 0.1) }.play;
+y = { SinOsc.ar(67.midicps, 0, 0.1) }.play;
+z = { SinOsc.ar(71.midicps, 0, 0.1) }.play;
+
+w.free;
+x.free;
+y.free;
+z.free;
 ```
 Rectangles in the node tree are synth nodes. Each synth gets a temporary name and stays there so long as it is
 running.  
