@@ -267,6 +267,7 @@ x.free;
 y.free;
 z.free;
 ```
+[](./plotTreeexample.png)
 Rectangles in the node tree are synth nodes. Each synth gets a temporary name and stays there so long as it is
 running.  
 The shortcut Ctrl+. stops all the nodes that are running on the server. A synth may be running even if it is just
