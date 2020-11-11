@@ -274,4 +274,9 @@ The shortcut Ctrl+. stops all the nodes that are running on the server. A synth 
 generating silence.
 
 Using `doneAction: 2` means that the synth frees itself when it's done its job.
+```supercollider
+{WhiteNoise.ar{Line.kr(0.2, 0, 3)}}.play;
+{WhiteNoise.ar{Line.kr(0.2, 0, 3, doneAction: 2)}}.play;
+```
+One item remains in the node tree while the other vanishes as soon as its corresponding sound stops.
 ## Enveloped 
