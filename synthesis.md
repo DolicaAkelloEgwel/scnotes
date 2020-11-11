@@ -280,4 +280,8 @@ Using `doneAction: 2` means that the synth frees itself when it's done its job.
 ```
 One item remains in the node tree while the other vanishes as soon as its corresponding sound stops.
 ## Envelopes 
+### Percussive Envelopes and `Env.perc`
+A percussive envelope is characterised by an abrupt onset followed by an immediate exponetial decay. This 
+envelope can be created in SuperCollider with the `Env.perc` object.  
 
+`Env.perc` takes four arguments: `attackTime`, `releaseTime`, `level`, and `curve`.
