@@ -254,7 +254,7 @@ to a single note in mono. TODO single note?
 TODO
 ## Synth Nodes
 TODO example + images
-```
+```supercollider
 s.plotTree;
 
 w = { SinOsc.ar(60.midicps, 0, 0.1) }.play;
@@ -279,4 +279,5 @@ Using `doneAction: 2` means that the synth frees itself when it's done its job.
 {WhiteNoise.ar{Line.kr(0.2, 0, 3, doneAction: 2)}}.play;
 ```
 One item remains in the node tree while the other vanishes as soon as its corresponding sound stops.
-## Enveloped 
+## Envelopes 
+
