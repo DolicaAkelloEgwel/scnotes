@@ -286,13 +286,13 @@ envelope can be created in SuperCollider with the `Env.perc` object.
 
 `Env.perc` takes four arguments: `attackTime`, `releaseTime`, `level`, and `curve`.
 ![](envplot.png)
-Plot created from `Env.perc.plot`
+Plot created from `Env.perc.plot`.  
 ![](envattackplot.png)
-Plot created from `Env.perc(0.5).plot` which leades to an attack value of half a second.
+Plot created from `Env.perc(0.5).plot` which leades to an attack value of half a second.  
 ![](envargsplot.png)
-Plot created from `Env.perc(attackTime: 0.3, releaseTime: 2, level: 0.4).plot`.
+Plot created from `Env.perc(attackTime: 0.3, releaseTime: 2, level: 0.4).plot`.  
 ![](straightlinesenv.png)
-Plot created from `Env.perc(0.3, 2, 0.4, 0).plot`. The final argument means that the plot doesn't contain curves.
+Plot created from `Env.perc(0.3, 2, 0.4, 0).plot`. The final argument means that the plot doesn't contain curves.  
 ### `Env.linen`
 `Env.linen` describes a line envelope with attack, sustain, and release.
 TODO: example
