@@ -285,3 +285,10 @@ A percussive envelope is characterised by an abrupt onset followed by an immedia
 envelope can be created in SuperCollider with the `Env.perc` object.  
 
 `Env.perc` takes four arguments: `attackTime`, `releaseTime`, `level`, and `curve`.
+![](envplot.png)
+Plot created from `Env.perc.plot`
+### `Env.linen`
+`Env.linen` describes a line envelope with attack, sustain, and release.
+TODO: example
+### `Env.pairs`
+`Env.pairs` allows you to create envelopes of any shape and duration. TODO: how is this more "flexible"?
