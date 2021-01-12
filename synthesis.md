@@ -294,7 +294,10 @@ Plot created from `Env.perc(attackTime: 0.3, releaseTime: 2, level: 0.4).plot`.
 ![](straightlinesenv.png)  
 Plot created from `Env.perc(0.3, 2, 0.4, 0).plot`. The final argument means that the plot doesn't contain curves.  
 ### `Env.triangle`
-TODO
+```supercollider
+{SinOsc.ar([440, 442], mul: Env.triangle.kr(2))}.play;
+{SinOsc.ar([440, 442]) * Env.triangle.kr(2)}.play;
+```
 ### `Env.linen`
 `Env.linen` describes a line envelope with attack, sustain, and release.
 TODO: example
