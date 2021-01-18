@@ -303,3 +303,7 @@ Plot created from `Env.perc(0.3, 2, 0.4, 0).plot`. The final argument means that
 TODO: example
 ### `Env.pairs`
 `Env.pairs` allows you to create envelopes of any shape and duration. TODO: how is this more "flexible"?
+### ADSR
+```supercollider
+x = {arg gate = 1, freq = 440; SinOsc.ar(freq: freq, muk: Env.asr(0.5, 0.8, 3).kr(doneAction: 2, date: gate))}.play;
+```
