@@ -305,5 +305,7 @@ TODO: example
 `Env.pairs` allows you to create envelopes of any shape and duration. TODO: how is this more "flexible"?
 ### ADSR
 ```supercollider
+// ASR
+// attack - 0.5s, sustain - 0.8s, release - 3s
 x = {arg gate = 1, freq = 440; SinOsc.ar(freq: freq, muk: Env.asr(0.5, 0.8, 3).kr(doneAction: 2, date: gate))}.play;
 ```
