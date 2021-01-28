@@ -309,3 +309,7 @@ TODO: example
 // attack - 0.5s, sustain - 0.8s, release - 3s
 x = {arg gate = 1, freq = 440; SinOsc.ar(freq: freq, muk: Env.asr(0.5, 0.8, 3).kr(doneAction: 2, date: gate))}.play;
 ```
+Attack: Time taken to go from zero to peak amplitude.  
+Decay: Time taken to from from peak amplitude to sustain amplitude.  
+Sustain: Amplitude at which to hold the note.  
+Release: Time taken to go from sustain amplitude to zero.  
